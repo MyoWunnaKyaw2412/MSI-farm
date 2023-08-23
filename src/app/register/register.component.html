@@ -1,0 +1,74 @@
+<section>
+    <div class="login-box" >
+        <div class="login-value">
+            <form action="">
+                <h2>Register</h2>
+                <div class="input-box">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input 
+                    type="text"
+                    [formControl]="username"
+                    >
+                    <label for="">User Name</label>
+                </div>
+                <div class="input-box">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input 
+                    type="password"
+                    [formControl] = "password"
+                    >
+                    <label for="">Password</label>
+                </div>
+
+                <ng-container *ngFor="let genders of Gender">
+                    <input class="me-2"
+                    type="radio"
+                    [id] = 'genders'
+                    name="gender"
+                    [value]="genders"
+                    [formControl] = "gender"
+                    >
+                    <label [for]="genders">{{genders}}</label>
+                    <br><br>
+                </ng-container>
+                <!-- <input 
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                [formControl] = "gender"
+                >
+                <label for="male">Male</label>
+
+                <br>
+
+                <input 
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                [formControl] = "gender"
+                >
+                <label for="female">Female</label>
+
+                <br>
+
+                <input 
+                type="radio"
+                id="rather"
+                name="gender"
+                value="rather"
+                [formControl] = "gender"
+                >
+                <label for="rather">Rather</label> -->
+                <br>
+                
+                <div class="forgetpw">
+                    <label for=""><input type="checkbox">Remember Me<a href="#">Forget Password</a></label>    
+                </div>
+                <button class="login-btn" (click)="login()">Login</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    
